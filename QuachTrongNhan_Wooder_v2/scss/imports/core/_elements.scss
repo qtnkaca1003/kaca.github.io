@@ -1,0 +1,71 @@
+// css button, title, icon, elements..
+.textbox__title{
+    text-transform: uppercase;
+    color: $text-black-cl;
+    font-size: 40px;
+    font-family: pb;
+    letter-spacing: 0.7px;
+    @media (max-width: 991px){
+        font-size: 30px;
+        letter-spacing: 0.5px;
+        margin-bottom: 15px;
+    }
+    @media (max-width: $xxs-max){
+        font-size: 25px;
+    }
+  
+}
+.textbox__description{
+    font-size: 16px;
+    color: $text-cl;
+    font-family: pr;
+    
+}
+.--white{
+    color: #fff;
+}
+.pd{
+    padding-top: 90px;
+    @media (max-width: 991px){
+        padding-top: 50px;
+    }
+}
+.--yellow{
+    color: $main-bg-cl;
+}
+.btnmain{
+    letter-spacing: 5px;
+    border: 2px solid #fff;
+    padding: 15px 40px 18px 49px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: pr;
+    font-size: 14px;
+    width: max-content;
+    &:after{
+        content:"" ;
+        width: 100%;
+        height: 100%;
+        background: $main-bg-cl;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        @include transition($t);
+    }
+    &:hover{
+        &:after{
+            transform: scaleX(1);
+            transform-origin: right;
+            @include transition($cubic);
+            @include transition($t);
+        }
+    }
+    @media (max-width: 991px){
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}

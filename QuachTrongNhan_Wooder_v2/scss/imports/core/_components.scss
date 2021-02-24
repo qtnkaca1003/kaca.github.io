@@ -1,0 +1,107 @@
+// css components
+main{
+    .products{
+        .product__list{
+            .product__list-item{
+                .textbox{
+                    padding-top: 80px;
+                    padding-left: 100px;
+                    padding-right: 20px;
+                    &__title{
+                        position: relative;
+                        margin-bottom: 25px;
+                        display: inline-flex;
+                        align-items: center;
+                        &::before{
+                            content: "";
+                            width: 80px;
+                            height: 2px;
+                            background: $black-cl;
+                            display: inline-block;
+                            margin-left: -80px;
+                            position: relative;
+                            left: -20px;
+                        }
+                    }
+                    &__description{
+                        @include overtext(3);
+                    }
+                    &__link{ 
+                            text-transform: uppercase;
+                            color: $text-cl;
+                            text-decoration: none;
+                            margin-top: 10px;
+                            font-family: pb;
+                            font-size: 14px;
+                            position: relative;
+                            display: inline-flex;
+                            transition: $t;
+                            
+                            &:before{
+                                content: "";
+                                width: 35px;
+                                height: 2px;
+                                display: block;
+                                background: $main-bg-cl;
+                                position: absolute;
+                                bottom: -5px;
+                            }
+                            &:hover{
+                               transition: $t;
+                                opacity: 0.5;
+                               
+
+                            }
+                    }
+                    
+                }
+                .--right{
+                    text-align: right;
+                    padding-right: 100px;
+                    padding-left: 20px;
+                    .textbox__title{
+                        flex-direction: row-reverse;
+                        &::before{
+                            margin-left: initial;
+                            left: initial;
+                            margin-right: -80px;
+                            right: -20px;
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+    }
+    .news{
+        .container{
+            .card{
+                .content{
+                    .content__img{
+                        margin-bottom: 55px;
+                    }
+                    .content__textbox{
+                        .content__textbox__title{
+                            margin-bottom: 20px;
+                            position: relative;
+                            font-size: 18px;
+                            font-family: pb;
+                            min-height: 50px;
+                            &::before{
+                                content: "";
+                                width: 80px;
+                                height: 4px;
+                                background: $main-bg-cl;
+                                position: absolute;
+                                top: -30px;
+                            }
+                        }
+    
+                    }
+                 }
+            }
+        }
+    }
+}
+
