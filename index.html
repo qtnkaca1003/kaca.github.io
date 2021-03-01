@@ -61,11 +61,11 @@
     </header>
     <nav class="navmenu">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">News</a></li>
+            <li><a class="active_menu" href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#news">News</a></li>
         </ul>
     </nav>
     <main class="mainwapper homelearning">
@@ -74,14 +74,14 @@
         </div>
         <section class="slider home">
             <div class="slider__list">
-                <div class="slider__list-item active ">
+                <div class="slider__list-item ">
                     <img src="img/slider.jpg" alt="" class="imgslide">
                     <div class="content">
-                        <h2>Wooder </h2>
+                        <h2 class="title">Wooder </h2>
                         <a class="btnmain" href="#">Learn More <img src="img/icons/arrow_right.png" alt=""></a>
                     </div>
                 </div>
-                <div class="slider__list-item  ">
+                <div class="slider__list-item ">
                     <img src="img/slide1.jpg" alt="" class="imgslide">
                     <div class="content">
                         <h2>Wooder</h2>
@@ -100,11 +100,7 @@
                 <div class="container-fluid">
                     <div class="paging">
                         <div class="number">01</div>
-                        <ul>
-                            <li class="active"></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
+                        <div class="dotted"></div>
                     </div>
                     <div class="mouse">
                         <img src="img/icons/mouse.png" class="mouse__img" alt="">
@@ -246,14 +242,32 @@
                             of the highest class
                         </p>
                     </div>
-
-                    <div class="gallery__img">
-                        <img class="img1" src="img/sofa_small.jpg" data-img="sofa.jpg" >
-                        <img class="img2" src="img/chair_small.jpg" data-img="chair.jpg">
-                        <img class="img3" src="img/sofas_small.jpg" data-img="sofas.jpg">
-                        <img class="img4" src="img/light_small.jpg" data-img="light.jpg">
-                        <img class="img5" src="img/room_small.jpg" data-img="room.jpg">
-
+                    <div class="carousel-img" itemscope data-pswp-uid="1">
+                        <figure class="image img1">
+                            <a href="img/sofa.jpg" data-size="640x853" >
+                                <img src="img/sofa_small.jpg">
+                            </a>
+                        </figure>
+                        <figure class="image img2">
+                            <a href="img/chair.jpg" data-size="640x960">
+                                <img src="img/chair_small.jpg">
+                            </a>
+                        </figure>
+                        <figure class="image img3">
+                            <a href="img/sofas.jpg" data-size="640x427">
+                                <img src="img/sofas_small.jpg">
+                            </a>
+                        </figure>
+                        <figure class="image img4">
+                            <a href="img/light.jpg" data-size="640x427">
+                                <img src="img/light_small.jpg">
+                            </a>
+                        </figure>
+                        <figure class="image img5">
+                            <a href="img/room.jpg" data-size="640x427">
+                                <img src="img/room_small.jpg">
+                            </a>
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -321,19 +335,29 @@
 
             </div>
         </section>
-         <section class="slide__bottom">
-           
-                <div class="slide__bottom__igm">
-                    <img class=" img1" src="img/itis.jpg" alt="" srcset="">
-                    <img class=" img2" src="img/sofas_small.jpg" alt="" srcset="">
-                    <img class=" img3" src="img/chair_small.jpg" alt="" srcset="">
-                    <img class=" img4" src="img/room_small.jpg" alt="" srcset="">
+       <!--   <section class="slide__bottom">
+                <div class="slide__bottom__img">
+                    <div class="item">
+                        <img class=" img1" src="img/itis.jpg" alt="" srcset="">
+                    </div>
+                    <div class="item">
+                        <img class=" img2" src="img/sofas_small.jpg" alt="" srcset="">
+                    </div>
+                    <div class="item">
+                        <img class=" img3" src="img/chair_small.jpg" alt="" srcset="">
+                    </div>
+                    <div class="item">
+                        <img class=" img4" src="img/room_small.jpg" alt="" srcset="">
+                    </div>
+                  
+                  
+                
 
 
                 </div>
           
 
-        </section> 
+        </section>  -->
     </main>
     <footer>
         <div class="container">
@@ -349,13 +373,17 @@
         </div>
     </footer>
     <div class="popup-video">
-        <div class="iframe_wrap">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <div class="close">x</div>
-        </div>
+       
+            <div class="iframe_wrap">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="close">x</div>
+            </div>
+      
+
+       
         
     </div>
-    <div class="popup__img">
+    <!-- <div class="popup__img">
         <div class="btn_left">
             <img src="img/icons/left-arrow.svg" alt="">
         </div>
@@ -368,6 +396,42 @@
             <img src="img/icons/right-arrow1.svg" alt="">
         </div>
         <div class="popup__img__close">x</div>
+    </div> -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
     </div>
     <script type="text/javascript" src="dest/jsmain.min.js"></script>
     <script type="text/javascript" src="dest/main.js"></script>
