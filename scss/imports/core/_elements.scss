@@ -59,9 +59,15 @@
     &:hover{
         &:after{
             transform: scaleX(1);
-            transform-origin: right;
+            transform-origin: left;
             @include transition($cubic);
             @include transition($t);
+        }
+        .img_play{
+            animation: quay 0.5s;
+        }
+        .img_more{
+           
         }
     }
     @media (max-width: 991px){

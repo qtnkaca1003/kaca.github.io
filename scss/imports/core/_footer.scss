@@ -23,5 +23,23 @@ footer{
                 text-decoration: none;
             }
         }
+        .to_top{
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            transition: .4s ease-in;
+            cursor: pointer;
+            border-radius: 5px;
+            @include visible(0);
+            img{
+                width: 50px;
+            }
+            
+            //transform: translateX(25px);
+
+        }
+        .active{    
+            @include visible(1);
+        }
     }
 }
