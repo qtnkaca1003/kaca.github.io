@@ -62,7 +62,7 @@ function toTop() {
 }
 function acctiveToTop() {
     let scrollY = window.pageYOffset;
-    let add = document.querySelector('.to_top span')
+    let add = document.querySelector('.to_top')
     if (scrollY > (hightSlider - hightHeader)) {
         add.classList.add('active');
     }
@@ -175,12 +175,15 @@ menus.forEach(function (item, index) {
         item.classList.add('active_menu');
     })
 })
+
 window.addEventListener('scroll', function (e) {
     let coord = window.pageYOffset;
     sections.forEach(function (section_menu, index) {
         if (coord > section_menu.offsetTop - hightHeader && coord < section_menu.offsetTop + section_menu.offsetHeight) {
             removeActiveMenu();
             menus[index].classList.add('active_menu');
+           
+
         }
         else {
             menus[index].classList.remove('active_menu');
@@ -482,3 +485,27 @@ $(window).on('load', function(){
     initPhotoSwipeFromDOM('.carousel-img');
 });
 
+let timeLine = new gsap.timeline();
+
+
+/* let product = $('.products .container .product__list .product__list-item .product__img');
+gsap.to(product,{
+    duration: 1,
+    opacity:1,
+  
+   });
+let title = $('.products .container .product__list .product__list-item .textbox');
+gsap.to(title,{
+    duration: 1,
+    opacity:1,
+  
+   }); */
+
+/* let product_hiden =$('#products');
+window.addEventListener('scroll', function (e) {
+if(product_hiden.hasClass('active_menu')== true ){
+    $('.product__img').addClass('active_product_img');
+    $('.textbox').addClass('active_textbox');
+    
+}
+}) */
